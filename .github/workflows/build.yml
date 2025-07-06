@@ -1,5 +1,5 @@
 # .github/workflows/build.yml
-name: Build & Test NSO Server (.NET 9)
+name: Build & Test NSO Server
 
 on:
   push: { branches: [main] }
@@ -7,29 +7,54 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest      # có thể dùng matrix nếu cần Win / macOS
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-      with: { lfs: true }
 
+    # 1) Lấy code về runner
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        lfs: true
+
+    # 2) Cache NuGet để tăng tốc
+    - name: Cache NuGet packages
+      uses: actions/cache@v4
+      with:
+        path: ~/.nuget/packages
+        key: nuget-${{ runner.os }}-${{ hashFiles('**/*.csproj') }}
+        restore-keys: |
+          nuget-${{ runner.os }}-
+
+    # 3) Cài .NET 9 SDK đúng bản (đã khớp global.json)
     - name: Setup .NET 9
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 9.0.x
+        dotnet-version: 9.0.301
 
+    # 4) Khôi phục packages
     - name: Restore
-      run: dotnet restore
+      run: dotnet restore NSO_Server.sln
 
+    # 5) Build
+    - name: Build (Release)
+      run: dotnet build NSO_Server.sln --configuration Release --no-restore
+
+    # 6) Test
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test tests/Nso.Tests/Nso.Tests.csproj --configuration Release --no-build --verbosity normal
 
+    # 7) Publish các micro-service
     - name: Publish Gate
-      run: dotnet publish src/Nso.Gate  -c Release -o out/Gate
+      run: dotnet publish src/Nso.Gate/Nso.Gate.csproj   -c Release -o out/Gate
     - name: Publish World
-      run: dotnet publish src/Nso.World -c Release -o out/World
+      run: dotnet publish src/Nso.World/Nso.World.csproj -c Release -o out/World
 
-    - uses: actions/upload-artifact@v4
+    # 8) Đóng gói artefact để tải về / dùng cho CD
+    - name: Upload artefacts
+      uses: actions/upload-artifact@v4
       with:
         name: nso-binaries
-        path: out/
+        path: |
+          out/Gate/**
+          out/World/**
         retention-days: 7
