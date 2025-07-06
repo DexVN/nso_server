@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  gate:
+    build: ./src/Nso.Gate
+    ports: ["3000:3000"]
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - REDIS__HOST=redis
+  world:
+    build: ./src/Nso.World
+    depends_on: [gate, redis]
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - GATE__URL=http://gate:3000
+  redis:
+    image: redis:7-alpine
