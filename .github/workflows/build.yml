@@ -1,0 +1,35 @@
+# .github/workflows/build.yml
+name: Build & Test NSO Server (.NET 9)
+
+on:
+  push: { branches: [main] }
+  pull_request: { branches: [main] }
+
+jobs:
+  build:
+    runs-on: ubuntu-latest      # có thể dùng matrix nếu cần Win / macOS
+    steps:
+    - uses: actions/checkout@v4
+      with: { lfs: true }
+
+    - name: Setup .NET 9
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 9.0.x
+
+    - name: Restore
+      run: dotnet restore
+
+    - name: Test
+      run: dotnet test --no-restore --verbosity normal
+
+    - name: Publish Gate
+      run: dotnet publish src/Nso.Gate  -c Release -o out/Gate
+    - name: Publish World
+      run: dotnet publish src/Nso.World -c Release -o out/World
+
+    - uses: actions/upload-artifact@v4
+      with:
+        name: nso-binaries
+        path: out/
+        retention-days: 7
