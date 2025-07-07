@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "Nso.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Nso.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Nso.Core.dll": {}
+        }
+      },
+      "Nso.Protocol/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Nso.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Nso.Protocol.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Nso.Protocol.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Nso.Core/1.0.0": {
+      "type": "project",
+      "path": "../Nso.Core/Nso.Core.csproj",
+      "msbuildProject": "../Nso.Core/Nso.Core.csproj"
+    },
+    "Nso.Protocol/1.0.0": {
+      "type": "project",
+      "path": "../Nso.Protocol/Nso.Protocol.csproj",
+      "msbuildProject": "../Nso.Protocol/Nso.Protocol.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "Nso.Core >= 1.0.0",
+      "Nso.Protocol >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\duykhanh\\.nuget\\packages\\": {},
@@ -39,7 +77,14 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\duykhanh\\Documents\\NSO\\Lab NSO\\nso_server\\src\\Nso.Core\\Nso.Core.csproj": {
+              "projectPath": "C:\\Users\\duykhanh\\Documents\\NSO\\Lab NSO\\nso_server\\src\\Nso.Core\\Nso.Core.csproj"
+            },
+            "C:\\Users\\duykhanh\\Documents\\NSO\\Lab NSO\\nso_server\\src\\Nso.Protocol\\Nso.Protocol.csproj": {
+              "projectPath": "C:\\Users\\duykhanh\\Documents\\NSO\\Lab NSO\\nso_server\\src\\Nso.Protocol\\Nso.Protocol.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

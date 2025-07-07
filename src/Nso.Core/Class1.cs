@@ -1,4 +1,4 @@
-namespace Nso.Core;
+﻿namespace Nso.Core;
 
 public class Class1
 {

@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rsinsmxxJGM=",
+  "dgSpecHash": "wV8oBk3KEw8=",
   "success": true,
   "projectFilePath": "C:\\Users\\duykhanh\\Documents\\NSO\\Lab NSO\\nso_server\\tests\\Nso.Tests\\Nso.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\duykhanh\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
-    "C:\\Users\\duykhanh\\.nuget\\packages\\microsoft.aspnetcore.testhost\\9.0.6\\microsoft.aspnetcore.testhost.9.0.6.nupkg.sha512",
     "C:\\Users\\duykhanh\\.nuget\\packages\\microsoft.codecoverage\\17.12.0\\microsoft.codecoverage.17.12.0.nupkg.sha512",
     "C:\\Users\\duykhanh\\.nuget\\packages\\microsoft.net.test.sdk\\17.12.0\\microsoft.net.test.sdk.17.12.0.nupkg.sha512",
     "C:\\Users\\duykhanh\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.12.0\\microsoft.testplatform.objectmodel.17.12.0.nupkg.sha512",
