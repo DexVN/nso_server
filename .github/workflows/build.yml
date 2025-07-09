@@ -43,11 +43,9 @@ jobs:
     - name: Test
       run: dotnet test tests/Nso.Tests/Nso.Tests.csproj --configuration Release --no-build --verbosity normal
 
-    # 7) Publish các micro-service
-    - name: Publish Gate
-      run: dotnet publish src/Nso.Gate/Nso.Gate.csproj   -c Release -o out/Gate
-    - name: Publish World
-      run: dotnet publish src/Nso.World/Nso.World.csproj -c Release -o out/World
+    # 7) Publish các service
+    - name: Publish Server
+      run: dotnet publish src/Nso.Server/Nso.Server.csproj   -c Release -o out/Server/Nso.World/Nso.World.csproj -c Release -o out/World
 
     # 8) Đóng gói artefact để tải về / dùng cho CD
     - name: Upload artefacts
@@ -55,6 +53,5 @@ jobs:
       with:
         name: nso-binaries
         path: |
-          out/Gate/**
-          out/World/**
+          out/Server/**
         retention-days: 7
