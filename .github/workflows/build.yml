@@ -45,7 +45,7 @@ jobs:
 
     # 7) Publish các service
     - name: Publish Server
-      run: dotnet publish src/Nso.Server/Nso.Server.csproj   -c Release -o out/Server/Nso.Server/Nso.Server.csproj -c Release -o out/Server
+      run: dotnet publish src/Nso.Server/Nso.Server.csproj -c Release -o out/Server
 
     # 8) Đóng gói artefact để tải về / dùng cho CD
     - name: Upload artefacts
