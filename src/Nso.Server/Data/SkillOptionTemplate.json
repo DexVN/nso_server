@@ -1,0 +1,292 @@
+{
+    "SkillOptionTemplate": [
+        {
+            "Id": 0,
+            "Name": "Tấn công ngoại: +#%"
+        },
+        {
+            "Id": 1,
+            "Name": "Tấn công nội: +#%"
+        },
+        {
+            "Id": 2,
+            "Name": "Hỏa công: +#"
+        },
+        {
+            "Id": 3,
+            "Name": "Băng sát: +#"
+        },
+        {
+            "Id": 4,
+            "Name": "Phong lôi: +#"
+        },
+        {
+            "Id": 5,
+            "Name": "Hỏa công ngoại: +#"
+        },
+        {
+            "Id": 6,
+            "Name": "Băng sát ngoại: +#"
+        },
+        {
+            "Id": 7,
+            "Name": "Phong lôi ngoại: +#"
+        },
+        {
+            "Id": 8,
+            "Name": "Hỏa công nội: +#"
+        },
+        {
+            "Id": 9,
+            "Name": "Băng sát nội: +#"
+        },
+        {
+            "Id": 10,
+            "Name": "Phong lôi nội: +#"
+        },
+        {
+            "Id": 11,
+            "Name": "Tấn công cơ bản: +#%"
+        },
+        {
+            "Id": 12,
+            "Name": "Chính xác: +#"
+        },
+        {
+            "Id": 13,
+            "Name": "Né đòn: +#"
+        },
+        {
+            "Id": 14,
+            "Name": "Chí mạng: +#"
+        },
+        {
+            "Id": 15,
+            "Name": "Phản đòn cận chiến: +#"
+        },
+        {
+            "Id": 16,
+            "Name": "Tốc độ di chuyển: +#"
+        },
+        {
+            "Id": 17,
+            "Name": "Tỉ lệ HP tối đa: +#%"
+        },
+        {
+            "Id": 18,
+            "Name": "Tỉ lệ MP tối đa: +#%"
+        },
+        {
+            "Id": 19,
+            "Name": "Kháng tất cả: +#"
+        },
+        {
+            "Id": 20,
+            "Name": "Kháng hỏa: +#"
+        },
+        {
+            "Id": 21,
+            "Name": "Kháng băng: +#"
+        },
+        {
+            "Id": 22,
+            "Name": "Kháng phong: +#"
+        },
+        {
+            "Id": 23,
+            "Name": "Kháng phản đòn: +#"
+        },
+        {
+            "Id": 24,
+            "Name": "Xác xuất gây bỏng: +#% duy trì 2 giây"
+        },
+        {
+            "Id": 25,
+            "Name": "Xác xuất đóng băng: +#% duy trì 1.5 giây"
+        },
+        {
+            "Id": 26,
+            "Name": "Xác xuất gây choáng: +#% duy trì 1 giây"
+        },
+        {
+            "Id": 27,
+            "Name": "Nữa giây phục hồi HP: +# duy trì 5 giây"
+        },
+        {
+            "Id": 28,
+            "Name": "Hồi phục cho đồng đội, sau khi hồi phục sẽ giúp đồng đội tăng khả năng né tránh: +# duy trì 5 giây"
+        },
+        {
+            "Id": 29,
+            "Name": "Tăng % kinh nghiệm khi đánh quái: +#%"
+        },
+        {
+            "Id": 30,
+            "Name": "Khi Mp lớn hơn 10%, dùng MP hút sát thương: +#% duy trì 90 giây"
+        },
+        {
+            "Id": 31,
+            "Name": "Né tránh hoàn toàn tấn công: +#%"
+        },
+        {
+            "Id": 32,
+            "Name": "Hạ khắc: +#"
+        },
+        {
+            "Id": 33,
+            "Name": "Tương khắc: +#"
+        },
+        {
+            "Id": 34,
+            "Name": "Xác suất gây bỏng: +#% duy trì 4 giây"
+        },
+        {
+            "Id": 35,
+            "Name": "Xác suất đóng băng: +#% duy trì 3 giây"
+        },
+        {
+            "Id": 36,
+            "Name": "Xác suất gây choáng: +#% duy trì 2 giây"
+        },
+        {
+            "Id": 37,
+            "Name": "Giảm thời gian bị bỏng: -0.# giây"
+        },
+        {
+            "Id": 38,
+            "Name": "Giảm thời gian bị đóng băng: -0.# giây"
+        },
+        {
+            "Id": 39,
+            "Name": "Giảm thời gian bị choáng: -0.# giây"
+        },
+        {
+            "Id": 40,
+            "Name": "Giảm 3 giây thời gian bị bỏng: duy trì # giây"
+        },
+        {
+            "Id": 41,
+            "Name": "Giảm 2 giây thời gian bị đóng băng: duy trì # giây"
+        },
+        {
+            "Id": 42,
+            "Name": "Giảm 1 giây thời gian bị choáng: duy trì # giây"
+        },
+        {
+            "Id": 43,
+            "Name": "Nữa giây phục hồi HP cho đồng đội: +# duy trì 5 giây"
+        },
+        {
+            "Id": 44,
+            "Name": "Tăng tỉ lệ Hp cho đồng đội: +#%"
+        },
+        {
+            "Id": 45,
+            "Name": "Tăng kháng tất cả cho mình và đồng đội: +# duy trì 90 giây"
+        },
+        {
+            "Id": 46,
+            "Name": "Tăng tấn công cơ bản cho mình và đồng đội: +#% duy trì 90 giây"
+        },
+        {
+            "Id": 47,
+            "Name": "Giảm 2 giây thời gian bị bỏng cho đồng đội: duy trì # giây"
+        },
+        {
+            "Id": 48,
+            "Name": "Vô hiệu hóa tấn công của quái vật: duy trì +# giây"
+        },
+        {
+            "Id": 49,
+            "Name": "Tạo vật thế thân: duy trì +# giây"
+        },
+        {
+            "Id": 50,
+            "Name": "Biến quái thành thức ăn: tăng +#HP"
+        },
+        {
+            "Id": 51,
+            "Name": "Đốt Hp của quái vật dựa trên tấn công hiện tại: +#% duy trì 30 giây"
+        },
+        {
+            "Id": 52,
+            "Name": "Ẩn thân mỗi nữa giây phục hồi Mp, Hp: +# duy trì 5 giây"
+        },
+        {
+            "Id": 53,
+            "Name": "Tàng hình: duy trì # giây"
+        },
+        {
+            "Id": 54,
+            "Name": "Giảm 1 giây thời gian bị đóng băng cho đồng đội: duy trì # giây"
+        },
+        {
+            "Id": 55,
+            "Name": "Làm cho đối phương không thể di chuyển: duy trì +# giây"
+        },
+        {
+            "Id": 56,
+            "Name": "Mỗi nữa giây giảm trừ 3% Hp đồng thời tăng tấn công cơ bản: +#% duy trì 5 giây"
+        },
+        {
+            "Id": 57,
+            "Name": "Giảm 0.5 giây thời gian bị choáng cho đồng đội: duy trì # giây"
+        },
+        {
+            "Id": 58,
+            "Name": "Hỗ trợ tấn công chiêu cấp 30: +#%"
+        },
+        {
+            "Id": 59,
+            "Name": "Hỗ trợ tấn công chiêu cấp 40: +#%"
+        },
+        {
+            "Id": 60,
+            "Name": "Hỗ trợ tấn công chiêu cấp 50: +#%"
+        },
+        {
+            "Id": 61,
+            "Name": "Tăng #% tấn công của nhát đánh đầu tiên của chiêu cấp 35"
+        },
+        {
+            "Id": 62,
+            "Name": "Tăng # giây giữ chặt đối phương của chiêu cấp 35"
+        },
+        {
+            "Id": 63,
+            "Name": "Phục hồi # Hp mỗi khi bị bỏng"
+        },
+        {
+            "Id": 64,
+            "Name": "Giảm trừ tất cả các sát thương: duy trì # giây"
+        },
+        {
+            "Id": 65,
+            "Name": "Tăng tấn công khi đánh chí mạng: +#%"
+        },
+        {
+            "Id": 66,
+            "Name": "Tăng #% hiệu của của chiêu cấp 15, cấp 35, cấp 40"
+        },
+        {
+            "Id": 67,
+            "Name": "Trừ kháng tất cả: -# của đối phương khi có hiệu ứng băng"
+        },
+        {
+            "Id": 68,
+            "Name": "Phân thân tồn tại trong: # phút"
+        },
+        {
+            "Id": 69,
+            "Name": "Tỉ lệ #% đóng băng mục tiêu khi bị tấn công"
+        },
+        {
+            "Id": 70,
+            "Name": "Đóng băng mục tiêu trong: # giây"
+        },
+        {
+            "Id": 71,
+            "Name": "Sức đánh phân thân: #%"
+        }
+    ]
+}
