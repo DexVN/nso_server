@@ -1,15 +1,11 @@
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Protocol\bin\Debug\net9.0\Nso.Protocol.deps.json
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Protocol\bin\Debug\net9.0\Nso.Protocol.dll
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Protocol\bin\Debug\net9.0\Nso.Protocol.pdb
-C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Protocol\bin\Debug\net9.0\Nso.Core.dll
-C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Protocol\bin\Debug\net9.0\Nso.Core.pdb
-C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Protocol\obj\Debug\net9.0\Nso.Protocol.csproj.AssemblyReference.cache
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Protocol\obj\Debug\net9.0\Nso.Protocol.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Protocol\obj\Debug\net9.0\Nso.Protocol.AssemblyInfoInputs.cache
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Protocol\obj\Debug\net9.0\Nso.Protocol.AssemblyInfo.cs
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Protocol\obj\Debug\net9.0\Nso.Protocol.csproj.CoreCompileInputs.cache
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Protocol\obj\Debug\net9.0\Nso.Protocol.sourcelink.json
-C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Protocol\obj\Debug\net9.0\Nso.Prot.99851B96.Up2Date
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Protocol\obj\Debug\net9.0\Nso.Protocol.dll
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Protocol\obj\Debug\net9.0\refint\Nso.Protocol.dll
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Protocol\obj\Debug\net9.0\Nso.Protocol.pdb

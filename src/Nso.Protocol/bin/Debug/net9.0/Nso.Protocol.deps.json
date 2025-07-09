@@ -7,30 +7,14 @@
   "targets": {
     ".NETCoreApp,Version=v9.0": {
       "Nso.Protocol/1.0.0": {
-        "dependencies": {
-          "Nso.Core": "1.0.0"
-        },
         "runtime": {
           "Nso.Protocol.dll": {}
-        }
-      },
-      "Nso.Core/1.0.0": {
-        "runtime": {
-          "Nso.Core.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
         }
       }
     }
   },
   "libraries": {
     "Nso.Protocol/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Nso.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

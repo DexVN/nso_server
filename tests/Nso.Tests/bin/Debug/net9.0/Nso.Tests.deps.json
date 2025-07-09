@@ -341,18 +341,7 @@
         }
       },
       "xunit.runner.visualstudio/2.8.2": {},
-      "Nso.Core/1.0.0": {
-        "runtime": {
-          "Nso.Core.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
       "Nso.Protocol/1.0.0": {
-        "dependencies": {
-          "Nso.Core": "1.0.0"
-        },
         "runtime": {
           "Nso.Protocol.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -472,11 +461,6 @@
       "sha512": "sha512-vm1tbfXhFmjFMUmS4M0J0ASXz3/U5XvXBa6DOQUL3fEz4Vt6YPhv+ESCarx6M6D+9kJkJYZKCNvJMas1+nVfmQ==",
       "path": "xunit.runner.visualstudio/2.8.2",
       "hashPath": "xunit.runner.visualstudio.2.8.2.nupkg.sha512"
-    },
-    "Nso.Core/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     },
     "Nso.Protocol/1.0.0": {
       "type": "project",

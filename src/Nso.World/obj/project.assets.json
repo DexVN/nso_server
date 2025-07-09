@@ -5,6 +5,9 @@
       "Nso.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Nso.Protocol": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Nso.Core.dll": {}
         },
@@ -15,9 +18,6 @@
       "Nso.Protocol/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "Nso.Core": "1.0.0"
-        },
         "compile": {
           "bin/placeholder/Nso.Protocol.dll": {}
         },

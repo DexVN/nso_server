@@ -412,22 +412,9 @@
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "Nso.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "compile": {
-          "bin/placeholder/Nso.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Nso.Core.dll": {}
-        }
-      },
       "Nso.Protocol/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "Nso.Core": "1.0.0"
-        },
         "compile": {
           "bin/placeholder/Nso.Protocol.dll": {}
         },
@@ -955,11 +942,6 @@
         "xunit.runner.visualstudio.2.8.2.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
-    },
-    "Nso.Core/1.0.0": {
-      "type": "project",
-      "path": "../../src/Nso.Core/Nso.Core.csproj",
-      "msbuildProject": "../../src/Nso.Core/Nso.Core.csproj"
     },
     "Nso.Protocol/1.0.0": {
       "type": "project",

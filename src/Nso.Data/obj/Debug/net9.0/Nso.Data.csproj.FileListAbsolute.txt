@@ -1,11 +1,17 @@
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Data\bin\Debug\net9.0\Nso.Data.deps.json
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Data\bin\Debug\net9.0\Nso.Data.dll
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Data\bin\Debug\net9.0\Nso.Data.pdb
+C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Data\bin\Debug\net9.0\Nso.Core.dll
+C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Data\bin\Debug\net9.0\Nso.Protocol.dll
+C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Data\bin\Debug\net9.0\Nso.Core.pdb
+C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Data\bin\Debug\net9.0\Nso.Protocol.pdb
+C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Data\obj\Debug\net9.0\Nso.Data.csproj.AssemblyReference.cache
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Data\obj\Debug\net9.0\Nso.Data.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Data\obj\Debug\net9.0\Nso.Data.AssemblyInfoInputs.cache
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Data\obj\Debug\net9.0\Nso.Data.AssemblyInfo.cs
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Data\obj\Debug\net9.0\Nso.Data.csproj.CoreCompileInputs.cache
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Data\obj\Debug\net9.0\Nso.Data.sourcelink.json
+C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Data\obj\Debug\net9.0\Nso.Data.csproj.Up2Date
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Data\obj\Debug\net9.0\Nso.Data.dll
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Data\obj\Debug\net9.0\refint\Nso.Data.dll
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\src\Nso.Data\obj\Debug\net9.0\Nso.Data.pdb

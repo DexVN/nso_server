@@ -33,11 +33,11 @@ jobs:
 
     # 4) Khôi phục packages
     - name: Restore
-      run: dotnet restore NSO_Server.sln
+      run: dotnet restore nso-server.sln
 
     # 5) Build
     - name: Build (Release)
-      run: dotnet build NSO_Server.sln --configuration Release --no-restore
+      run: dotnet build nso-server.sln --configuration Release --no-restore
 
     # 6) Test
     - name: Test

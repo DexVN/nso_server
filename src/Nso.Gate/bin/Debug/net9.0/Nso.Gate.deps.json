@@ -16,6 +16,9 @@
         }
       },
       "Nso.Core/1.0.0": {
+        "dependencies": {
+          "Nso.Protocol": "1.0.0"
+        },
         "runtime": {
           "Nso.Core.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -24,9 +27,6 @@
         }
       },
       "Nso.Protocol/1.0.0": {
-        "dependencies": {
-          "Nso.Core": "1.0.0"
-        },
         "runtime": {
           "Nso.Protocol.dll": {
             "assemblyVersion": "1.0.0.0",

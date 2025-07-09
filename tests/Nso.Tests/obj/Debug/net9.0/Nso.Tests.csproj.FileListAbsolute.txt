@@ -87,10 +87,8 @@ C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\tests\Nso.Tests\bin\Debug\net
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\tests\Nso.Tests\bin\Debug\net9.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\tests\Nso.Tests\bin\Debug\net9.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\tests\Nso.Tests\bin\Debug\net9.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\tests\Nso.Tests\bin\Debug\net9.0\Nso.Core.dll
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\tests\Nso.Tests\bin\Debug\net9.0\Nso.Protocol.dll
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\tests\Nso.Tests\bin\Debug\net9.0\Nso.Protocol.pdb
-C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\tests\Nso.Tests\bin\Debug\net9.0\Nso.Core.pdb
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\tests\Nso.Tests\obj\Debug\net9.0\Nso.Tests.csproj.AssemblyReference.cache
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\tests\Nso.Tests\obj\Debug\net9.0\Nso.Tests.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\duykhanh\Documents\NSO\Lab NSO\nso_server\tests\Nso.Tests\obj\Debug\net9.0\Nso.Tests.AssemblyInfoInputs.cache

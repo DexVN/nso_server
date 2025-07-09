@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Nso.Protocol\Nso.Protocol.csproj" />
+  </ItemGroup>
+
 </Project>
