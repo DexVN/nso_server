@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ux3nY+gtjXo=",
+  "dgSpecHash": "FAAU0tUycsk=",
   "success": true,
   "projectFilePath": "C:\\Users\\duykhanh\\Documents\\NSO\\Lab NSO\\nso_server\\src\\Nso.Server\\Nso.Server.csproj",
   "expectedPackageFiles": [
@@ -52,7 +52,9 @@
     "C:\\Users\\duykhanh\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
     "C:\\Users\\duykhanh\\.nuget\\packages\\npgsql\\9.0.3\\npgsql.9.0.3.nupkg.sha512",
     "C:\\Users\\duykhanh\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\9.0.4\\npgsql.entityframeworkcore.postgresql.9.0.4.nupkg.sha512",
+    "C:\\Users\\duykhanh\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
     "C:\\Users\\duykhanh\\.nuget\\packages\\scrutor\\6.1.0\\scrutor.6.1.0.nupkg.sha512",
+    "C:\\Users\\duykhanh\\.nuget\\packages\\stackexchange.redis\\2.8.41\\stackexchange.redis.2.8.41.nupkg.sha512",
     "C:\\Users\\duykhanh\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
     "C:\\Users\\duykhanh\\.nuget\\packages\\system.collections.immutable\\7.0.0\\system.collections.immutable.7.0.0.nupkg.sha512",
     "C:\\Users\\duykhanh\\.nuget\\packages\\system.composition\\7.0.0\\system.composition.7.0.0.nupkg.sha512",

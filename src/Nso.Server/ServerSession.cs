@@ -1,52 +1,64 @@
 using System.Net.Sockets;
+using System.Text;
 
 using Microsoft.Extensions.DependencyInjection;
 
-using Nso.Core;
-using Nso.Core.Net;
 using Nso.Protocol;
 using Nso.Server.Messaging;
-using Nso.Server.Models;
 
-public sealed class ServerSession : Session
+namespace Nso.Server.Core;
+
+public class ServerSession
 {
-    private readonly IServiceProvider _provider;
     private readonly TcpClient _client;
+    private readonly IServiceProvider _provider;
     private readonly CommandRouter _router;
-    private readonly AppDbContext _db;
+    private readonly SessionRegistry _sessionRegistry;
 
-    public bool IsAuthenticated { get; set; }
-    public ClientInfo ClientInfo { get; } = new();
+    public Guid SessionId { get; private set; }
+    public int? UserId { get; private set; }
 
-    public ServerSession(TcpClient client, IServiceProvider provider) : base(client)
+    public ServerSession(TcpClient client, IServiceProvider provider)
     {
         _client = client;
         _provider = provider;
-
         _router = _provider.GetRequiredService<CommandRouter>();
-        _db = _provider.GetRequiredService<AppDbContext>();
-
-        Log.I($"[+] New conn {_client.Client.RemoteEndPoint}");
+        _sessionRegistry = _provider.GetRequiredService<SessionRegistry>();
+        _ = Task.Run(RunAsync);
     }
 
-    protected override Task HandleAsync(Message msg)
+    private async Task RunAsync()
     {
-        var cmd = (Cmd)msg.Cmd;
+        var stream = _client.GetStream();
 
-        // luôn xử lý handshake (-27)
-        if (cmd == Cmd.GET_SESSION_ID)
-            return _router.DispatchAsync(this, msg);
+        while (_client.Connected)
+        {
+            var msg = await Message.ReadAsync(stream);
+            if (msg == null) break;
 
-        // chặn gameplay nếu chưa login
-        if (!IsAuthenticated && cmd != Cmd.NOT_LOGIN)
-            return Task.CompletedTask;
+            if (UserId.HasValue && !await _sessionRegistry.IsValidAsync(UserId.Value, SessionId))
+            {
+                Console.WriteLine($"[KICK] Session {SessionId} expired for user {UserId}");
+                _client.Close();
+                return;
+            }
 
-        return _router.DispatchAsync(this, msg);
+            await _router.RouteAsync(this, msg);
+        }
     }
 
-    internal void ActivateCipher(byte[] key)
+    public void Send(Message msg)
     {
-        Key = key;
-        Cipher = true;
+        var stream = _client.GetStream();
+        var bytes = msg.ToBytes();
+        stream.Write(bytes, 0, bytes.Length);
     }
+
+    public void AttachSession(int userId, Guid sessionId)
+    {
+        UserId = userId;
+        SessionId = sessionId;
+    }
+
+    public string Id => _client.Client.RemoteEndPoint?.ToString() ?? Guid.NewGuid().ToString();
 }

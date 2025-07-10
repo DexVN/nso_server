@@ -1,62 +1,39 @@
 using System.Reflection;
-using Nso.Core;
-using Nso.Protocol;
+
 using Microsoft.Extensions.DependencyInjection;
+
+using Nso.Server.Core;
 
 namespace Nso.Server.Messaging;
 
-internal sealed class CommandRouter
+public class CommandRouter
 {
-    private readonly Dictionary<(Cmd, sbyte?), ICommandHandler> _map = new();
+    private readonly IServiceProvider _provider;
+    private readonly Dictionary<byte, Type> _handlers = new();
 
-    public CommandRouter(IServiceProvider serviceProvider, params Assembly[] scan)
+    public CommandRouter(IServiceProvider provider, Assembly assembly)
     {
-        var assemblies = scan.Length == 0
-            ? new[] { Assembly.GetExecutingAssembly() }
-            : scan;
-
-        foreach (var type in assemblies.SelectMany(a => a.GetTypes()))
+        _provider = provider;
+        foreach (var type in assembly.GetTypes())
         {
-            var attrs = type.GetCustomAttributes<CmdHandlerAttribute>();
-            if (!attrs.Any()) continue;
+            if (!typeof(ICommandHandler).IsAssignableFrom(type)) continue;
 
-            if (!typeof(ICommandHandler).IsAssignableFrom(type))
-                throw new InvalidOperationException($"{type.Name} must implement ICommandHandler");
-
-            // Resolve instance từ DI container
-            if (serviceProvider.GetService(type) is not ICommandHandler inst)
-                throw new InvalidOperationException($"Handler '{type.Name}' chưa được đăng ký vào DI container!");
-
-            foreach (var attr in attrs)
-            {
-                var key = (attr.CmdId, attr.SubCmdId);
-                if (_map.ContainsKey(key))
-                    throw new InvalidOperationException($"Duplicate handler for ({key.CmdId}, {key.SubCmdId})");
-
-                _map[key] = inst;
-            }
+            var attr = type.GetCustomAttribute<CmdHandlerAttribute>();
+            if (attr != null)
+                _handlers[attr.Cmd] = type;
         }
     }
 
-    public async Task DispatchAsync(ServerSession s, Message m)
+    public async Task RouteAsync(ServerSession session, Message msg)
     {
-        sbyte? sub = null;
-
-        if (m.Data.Length > 0)
+        if (_handlers.TryGetValue(msg.Cmd, out var type))
         {
-            sbyte candidate = unchecked((sbyte)m.Data[0]);
-
-            if (_map.ContainsKey(((Cmd)m.Cmd, candidate)))
-                sub = candidate;
-        }
-
-        if (_map.TryGetValue(((Cmd)m.Cmd, sub), out var handler))
-        {
-            await handler.HandleAsync(s, m);
+            var handler = (ICommandHandler)_provider.GetRequiredService(type);
+            await handler.HandleAsync(session, msg);
         }
         else
         {
-            Log.W($"[Router] No handler for cmd {(int)m.Cmd}, sub {sub}");
+            Console.WriteLine($"[WARN] No handler for Cmd = {msg.Cmd}");
         }
     }
 }

@@ -6,8 +6,13 @@ namespace Nso.Server.Messaging;
 public sealed class CmdHandlerAttribute : Attribute
 {
     public Cmd CmdId { get; }
+    public byte Cmd { get; }
     public sbyte? SubCmdId { get; }   // null = không có sub-cmd
 
+    public CmdHandlerAttribute(byte cmd)
+    {
+        Cmd = cmd;
+    }
     public CmdHandlerAttribute(Cmd cmdId) { CmdId = cmdId; }
     public CmdHandlerAttribute(Cmd cmdId, sbyte subCmd)
     {

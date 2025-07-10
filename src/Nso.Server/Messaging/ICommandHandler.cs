@@ -1,6 +1,7 @@
 
 using Nso.Core.Net;
 using Nso.Protocol;
+using Nso.Server.Core;
 
 namespace Nso.Server.Messaging;
 
